@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70px;
+    padding: 20px 10px;
+}
+
+.logo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #777;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: lightblue;
+    color: #fff;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+
+.banner-left {
+    flex-basis: 40%;
+    margin-top: 50px;
+    margin-left: 70px;
+    width: 100%;
+}
+
+.banner-left h1 {
+    margin: 15px 0;
+    line-height: 40px;
+}
+
+.banner-left p {
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.banner-right {
+    flex-basis: 40%;
+}
+
+.banner-right img {
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+#menuBtn {
+    display: none;
+}
+
+
+
+
+
+
+
+/* Media Screen  */
+
+@media only screen and (max-width: 838px) {
+    .banner-left {
+        margin-left: 60px;
+    }
+    nav {
+        display: none;
+    }
+    #menuBtn {
+        display: block;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .banner-left {
+        flex-basis: 100%;
+        margin-left: 20px;
+    }
+    .banner-right {
+        flex-basis: 100%;
+    }
+    .navbar {
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    
+    #menu {
+        position: absolute;
+        display: block;
+        display: flex;
+        top: 110px;
+        width: 100px;
+        right: -500px;
+        background-color: #fff;
+        z-index: 1000;
+        transition: .4s linear ease;
+    }
+
+    #menu.active {
+        right: 2rem;
+        transition: .4s linear ease;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+}
